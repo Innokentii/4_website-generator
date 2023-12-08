@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название сайта</title>
+    <link rel="stylesheet" href="/static/main_css.css">
+    <link rel="icon" href="" type="image/x-icon">
+</head>
+<body>
+
+    <div class="_0_media_check_cl" style="display: none;">
+        <!--Указание размеров экрана-->
+        <style>
+            ._0_media_check_cl {
+                width: 150px;
+                height: 50px;
+                position: fixed;
+                top: 50px;
+                left: 50px;
+                background-color: aqua;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <div><span>Ширина-</span><span id="_0_media_width_id">0</span>px</div>
+        <div><span>Высота-</span><span id="_0_media_length_id">0</span>px</div>
+        <script>
+            // Указание размеров экрана;
+            document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+            document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            window.addEventListener('resize', _ => {
+                console.log(123);
+                document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+                document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            });
+        </script>
+    </div>
+
+    <div class="head_website_dempf_cl" id="head_website_dempf_id">
+        <!--Фиксированный (демпфер)-->
+    </div>
+     <div class="head_website_cl" id="head_website_id">
+        <!--Фиксированный-->
+
+        <div class="organizations_logo_cl" id="organizations_logo_id">
+            <!--иконка организации-->
+            <a href="/1_main">
+                <img src="static/windows_load.jpg" alt="Н/Ф" id="organizations_logo_img_id">
+            </a>
+            <div>
+                <span>ООО "Гидроакустика"</span>
+                <span>производство гидроокустических приборов</span>
+            </div>
+        </div>
+
+        <div class="catalog_cl" id="catalog_id">
+            <!--каталог-->
+            <a href="/1_main"><div>главное</div></a>
+        </div>
+        <div class="burger_catalog_cl" id="burger_catalog_id">
+            <!--каталог бургер-->
+            <img src="static/burger_catalog.jpg" alt="Н/Ф" id="burger_catalog_buttom_id">
+            <div class="burger_catalog_open_cl" id="burger_catalog_open_id">
+                <!--скрытый каталог-->
+                <a href="/main"><div>главное</div></a>
+            </div>
+            <script>
+                let organizations_logo = document.getElementById('organizations_logo_id');
+                let burger_catalog_open = document.getElementById('burger_catalog_open_id'); // (скрытый каталог);
+                let burger_catalog = document.getElementById('burger_catalog_id'); // (каталог бургер);
+                burger_catalog_open.style.display = 'none'; // (скрытие скрытого каталога);
+                document.getElementById('burger_catalog_buttom_id').addEventListener('click', _=>{
+                    // Скрытие и показ скрытого каталога;
+                    burger_catalog_open.style.top = `${burger_catalog.getBoundingClientRect().top + burger_catalog.offsetHeight}px`; // (Y-позиция каталог бургер);
+                    burger_catalog_open.style.left = `${burger_catalog.getBoundingClientRect().left - (organizations_logo.offsetWidth - 125)}px`; // (X-позиция каталог бургер);
+                    if (burger_catalog_open.style.display == 'none') {burger_catalog_open.style.display = 'flex'}
+                    else {burger_catalog_open.style.display = 'none'};
+                });
+            </script>
+        </div>
+
+        <div class="search_cl" id="search_id">
+            <!--поиск-->
+            <input type="text" id="search_text_id" placeholder="поиск">
+            <img src="static/search.png" alt="Н/Ф" id="search_buttom_id">
+        </div>
+
+        <div class="contacts_cl" id="contacts_id">
+            <!--контакты-->
+            <div>
+                <b>конт.ном.: </b><span>8 (999) 777-66-55</span>
+            </div>
+            <div>
+                <b>Email: </b><span>qwerty@mail.ru</span>
+            </div>
+        </div>
+
+        <div class="registration_cl" id="registration_id">
+            <!--регистрация-->
+            <div style="display: none;" class="registration_open_cl" id="registration_open_id">
+                <!--вход выполнен-->
+                <div>
+                    <!--логин и пароль-->
+                    <div>SUPER_LOGIN</div>
+                    <div><b>id:</b><span>123456789</span></div>
+                </div>
+                <img src="static/avatar.jpg" alt="Н/Ф">
+            </div>
+            <div class="registration_close_cl" id="registration_close_id">
+                <!--вход НЕ выполнен-->
+                <div id="registration_close_try_id"><span>вход</span></div>
+                <div id="registration_close_log_in_id"><span>регистрация</span></div>
+            </div>
+        </div>
+
+        <div class="location_cl" id="location_id">
+            <!--местонахождение-->
+            <div id="city_id">г. Алматы</div><img src="static/geolocation.png" alt="Н/Ф"></div>
+        </div>
+    </div>
+
+    {% block main %}
+    {% endblock %}
+
+    <footer id="footer_id">
+        <div class="head_footer_cl" id="head_footer_id">
+            <div>Содержимое данного сайта является собственностью ООО "Гидроакустика" и не может быть распространено без письменного согласия с владельцем.</div>
+            <div>Каталог</div>
+            <div>Контакты</div>
+        </div>
+        <div class="body_footer_cl" id="body_footer_id">ООО "Гидроакустика"</div>
+        <div class="developer_footer_cl"><a href=""><b>сайт сделан:</b><span> HaskProg</span></a></div>
+    </footer>
+
+
+    <div class="note_cl" id="note_id">
+        <!--заметка-->
+        <div>Заметка</div>
+    </div>
+    <script src="/static/main_js.js"></script>
+</body>
+</html>

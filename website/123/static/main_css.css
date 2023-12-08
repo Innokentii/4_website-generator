@@ -1,0 +1,393 @@
+/*=================================================================================*/
+/*                             ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ                               */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+:root {
+    --w_h_modal_win: 200px; /*(ширина и высота карточки модального окна);*/
+    --bord_modal_win: 4px; /*(толщина рамки border карточки модального окна);*/
+    --height__head_website: 80px; /*(высота шапки сайта);*/
+    --bord_head_website: 2px; /*(толщина рамки шапки сайта));*/
+}
+
+/*=================================================================================*/
+/*                                  СТИЛИЗАЦИЯ                                    */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 0.6fr 0.2fr 0.2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-top: solid 2px black;
+}
+
+footer > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: solid 2px black;
+}
+
+footer > div:nth-child(1) >div:nth-child(2) {
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+}
+
+footer > div:nth-child(2) {
+    border-bottom: solid 2px black;
+    text-align: center;
+}
+
+footer > div:nth-child(3) {
+    text-align: center;
+}
+
+/*_______главная страница_______*/
+
+.welcoming_page_cl {
+    /*встречающая страница*/
+    width: 100%;
+    height: 1000px;
+    background-image: url(/static/windows_load.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.organizations_activities_cl {
+    /*деятельность организации*/
+    width: 100%;
+    height: 1000px;
+    background-color: green;
+}
+
+.description_organization_cl {
+    /*описание организации*/
+    width: 100%;
+    height: 1000px;
+    background-color: blue;
+}
+
+body {
+    background: white;
+}
+
+/*________1_иконка загрузки страницы______________*/
+
+/*________3_тип шапки______________*/
+
+.head_website_dempf_cl {
+    /*фикцированный (демпфер)*/
+    width: calc(100% - var(--bord_head_website)*2);
+    height: var(--height__head_website);
+}
+
+.head_website_cl {
+    /*фикцированный*/
+    width: 100%;
+    height: var(--height__head_website);
+    border-bottom: solid var(--bord_head_website) black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 0fr 0.7fr 0.7fr 0fr 0.5fr 0.4fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .head_website_cl, .head_website_dempf_cl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 5px;
+    }
+}
+
+.note_cl {
+    /*заметка*/
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    background-color: rgb(121, 121, 206);
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px black;
+}
+
+/*___________________иконка организации_____________________*/
+.organizations_logo_cl {
+    width: 350px;
+    border-right: solid 1px black;
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.organizations_logo_cl > a > img {
+    height: 100%;
+    width: 100%;
+}
+
+.organizations_logo_cl > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.organizations_logo_cl > div > span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.organizations_logo_cl > div > span:nth-child(2) {
+    font-size: 15px;
+}
+
+/*___________________каталог_____________________*/
+.catalog_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px black;
+}
+
+@media (max-width: 768px) {
+    .catalog_cl {display: none;}
+}
+
+.catalog_cl > a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.burger_catalog_cl {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px black;
+}
+
+@media (max-width: 768px) {
+    .burger_catalog_cl {display: flex;}
+}
+
+#burger_catalog_buttom_id {
+    width: 50px;
+    height: 50px;
+}
+
+#burger_catalog_buttom_id:hover {
+    cursor: pointer;
+}
+
+#burger_catalog_buttom_id:active {
+    margin: 2.5px;
+    width: 45px;
+    height: 45px;
+}
+
+.burger_catalog_open_cl {
+    width: 250px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 10px;
+    border: solid 2px black;
+    background-color: white;
+}
+
+.burger_catalog_open_cl > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+/*___________________поиск_____________________*/
+
+.search_cl {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px black;
+}
+
+.search_cl > input {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .search_cl {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .search_cl > input {
+        width: 100%;
+    }
+}
+
+.search_cl > img {
+    width: 43px;
+    height: 43px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+.search_cl > img:hover {cursor: pointer;}
+
+.search_cl > img:active {
+    margin: 2.5px;
+    width: 38px;
+    height: 38px;
+}
+
+/*___________________контакты_____________________*/
+.contacts_cl {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: solid 1px black;
+    padding-left: 10px;
+}
+
+/*___________________регистрация_____________________*/
+.registration_cl {
+    border-right: solid 1px black;
+}
+
+.registration_open_cl {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr 0.1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration_open_cl > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.registration_open_cl > img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px black;
+    border-radius: 50%;
+}
+
+.registration_open_cl > img:hover {
+    cursor: pointer;
+}
+
+.registration_close_cl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#registration_close_try_id {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+    background-color: green;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#registration_close_try_id:hover {
+    cursor: pointer;
+}
+
+#registration_close_try_id:active {
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 168px;
+    height: 28px;
+    font-size: 18px;
+}
+
+#registration_close_log_in_id {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+    background-color: rgb(53, 53, 201);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#registration_close_log_in_id:hover {
+    cursor: pointer;
+}
+
+#registration_close_log_in_id:active {
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 168px;
+    height: 28px;
+    font-size: 18px;
+}
+
+
+/*___________________местонахождение_____________________*/
+
+.location_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.location_cl > img {
+    width: 15px;
+    height: 15px;
+}
+
+.location_cl:hover {
+    cursor: pointer;
+    background-color: rgb(89, 87, 87);
+    text-decoration: underline;
+}
