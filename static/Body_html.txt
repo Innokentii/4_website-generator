@@ -1,0 +1,11 @@
+
+    <footer id="footer_id">
+        <div class="head_footer_cl" id="head_footer_id">
+            <div>Содержимое данного сайта является собственностью ООО "Гидроакустика" и не может быть распространено без письменного согласия с владельцем.</div>
+            <div>Каталог</div>
+            <div>Контакты</div>
+        </div>
+        <div class="body_footer_cl" id="body_footer_id">ООО "Гидроакустика"</div>
+        <div class="developer_footer_cl"><a href=""><b>сайт сделан:</b><span> HaskProg</span></a></div>
+    </footer>
+

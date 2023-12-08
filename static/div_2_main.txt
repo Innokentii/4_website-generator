@@ -1,0 +1,26 @@
+
+        <div class="catalog_cl" id="catalog_id">
+            <!--каталог-->
+            <a href="/1_main"><div>главное</div></a>
+        </div>
+        <div class="burger_catalog_cl" id="burger_catalog_id">
+            <!--каталог бургер-->
+            <img src="static/burger_catalog.jpg" alt="Н/Ф" id="burger_catalog_buttom_id">
+            <div class="burger_catalog_open_cl" id="burger_catalog_open_id">
+                <!--скрытый каталог-->
+                <a href="/main"><div>главное</div></a>
+            </div>
+            <script>
+                let organizations_logo = document.getElementById('organizations_logo_id');
+                let burger_catalog_open = document.getElementById('burger_catalog_open_id'); // (скрытый каталог);
+                let burger_catalog = document.getElementById('burger_catalog_id'); // (каталог бургер);
+                burger_catalog_open.style.display = 'none'; // (скрытие скрытого каталога);
+                document.getElementById('burger_catalog_buttom_id').addEventListener('click', _=>{
+                    // Скрытие и показ скрытого каталога;
+                    burger_catalog_open.style.top = `${burger_catalog.getBoundingClientRect().top + burger_catalog.offsetHeight}px`; // (Y-позиция каталог бургер);
+                    burger_catalog_open.style.left = `${burger_catalog.getBoundingClientRect().left - (organizations_logo.offsetWidth - 125)}px`; // (X-позиция каталог бургер);
+                    if (burger_catalog_open.style.display == 'none') {burger_catalog_open.style.display = 'flex'}
+                    else {burger_catalog_open.style.display = 'none'};
+                });
+            </script>
+        </div>

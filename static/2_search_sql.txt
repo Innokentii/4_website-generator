@@ -1,0 +1,23 @@
+
+PATH_work = '' # (путь до базы данных);
+
+# База данных для списка товаров;
+connect = SQL.connect(f'{PATH_work}database/SQLite3_products.db')
+cursor = connect.cursor()
+cursor.execute("""CREATE TABLE IF NOT EXISTS users(
+                path_image text,
+                path_gain_image text,
+                product_name text,
+                main_characteristic text,
+                article_number text,
+                catalog_number text,
+                country text,
+                release_date text,
+                cost int,
+                quantity int,
+                measurement text
+                description text,
+                big_description text
+                );""")
+connect.commit()
+connect.close

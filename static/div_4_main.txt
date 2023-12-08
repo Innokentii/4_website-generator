@@ -1,0 +1,10 @@
+
+        <div class="contacts_cl" id="contacts_id">
+            <!--контакты-->
+            <div>
+                <b>конт.ном.: </b><span>8 (999) 777-66-55</span>
+            </div>
+            <div>
+                <b>Email: </b><span>qwerty@mail.ru</span>
+            </div>
+        </div>

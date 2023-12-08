@@ -1,0 +1,5 @@
+
+//===================================================================================================//
+//                      Многоразовые функции и события вызовов функций                               //
+//VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//
+

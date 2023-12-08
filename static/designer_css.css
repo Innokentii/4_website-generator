@@ -1,0 +1,43 @@
+.designer_body_parents_cl {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(116, 113, 113);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.designer_body_cl {
+    border: dashed 4px black;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.load_icon_main_parents_cl {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.load_icon_main_cl {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#radio_head_text_id {
+    width: 30px;
+}
+
+.var_img_cl {
+    width: 570px;
+    height: 190px;
+}

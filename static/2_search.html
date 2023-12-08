@@ -1,0 +1,192 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/2_search_css.css">
+
+<div class="search_start_cl" id="search_start_id">
+    <div class="search_block_cl">
+        <!--таблица товаров-->
+        <div>
+            <!--панель управления-->
+            <div class="search_main_cl">
+                <input type="text" id="search_main_id" placeholder="поиск">
+                <img src="static/search.png" alt="Н/Ф" id="search_img_main_id">
+            </div>
+            <div class="search_management_cl">
+                <div id="buttom_filter_id"><span>фильтр</span></div>
+                <img src="/static/table.jpg" alt="Н/Ф" id="table_icon_img_id">
+                <img src="/static/gain_icon.png" alt="Н/Ф" id="table_gain_icon_img_id">
+            </div>  
+        </div>
+
+        <!--товары в табличку-->
+        <div class="serch_table_parents_cl" id="serch_table_parents_id">
+            <!--товары в табличку-->
+            <table class="serch_table_cl">
+                <thead class="serch_table_thead_cl" id="serch_table_thead_id">
+                    <tr>
+                        <th>№</th>
+                        <th>img</th>
+                        <th>наименование товара</th>
+                        <th>мощность</th>
+                        <th>артикул</th>
+                        <th>каталожный номер</th>
+                        <th>страна</th>
+                        <th>дата выпуска</th>
+                        <th>стоимость</th>
+                        <th>кол. на складе</th>
+                        <th>ед.измерения</th>
+                        <th>уба-вить</th>
+                        <th>коли-чество</th>
+                        <th>доба-вить</th>
+                        <th>корзина</th>
+                    </tr>
+                    <tr id="serch_tr_1_id">
+                        <td>1</td>
+                        <td><img src="static/no_photo.jpg" alt="Н/Ф"></td>
+                        <td>двигатель cammins Q5</td>
+                        <td>400 кВт</td>
+                        <td>123456AB</td>
+                        <td>123456AB</td>
+                        <td>Швецария</td>
+                        <td>1994/08/24</td>
+                        <td>2480000 р</td>
+                        <td>24</td>
+                        <td>шт.</td>
+                        <td><div>-</div></td>
+                        <td>0</td>
+                        <td><div>+</div></td>
+                        <td>корзину</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <!--товары в крупные блоки-->
+        <div class="large_block_parents_cl" id="large_block_parents_id">
+            <!--товары в крупные блоки-->
+            <div class="large_block_cl">
+                <div class="large_block_pointer_cl" id="large_block_pointer_id">
+                    <img src="/static/work_img/qummins_1.webp" alt="Н/Ф">
+                    <table class="large_block_table_cl">
+                        <thead class="large_block_thead_cl large_block_thead_main_cl" id="large_block_thead_id">
+                            <tr>
+                                <td>двигатель cammins Q5</td>
+                            </tr>
+                            <tr>
+                                <td>400 кВт</td>
+                            </tr>
+                            <tr>
+                                <td>2480000 р</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div>
+                    <table class="large_block_table_cl">
+                        <thead class="large_block_thead_cl" id="large_block_thead_id">
+                            <tr>
+                                <td>кол.на складе: </td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>ед.измерения: </td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>артикул: </td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>катал.номер: </td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">описание: </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">123 </td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="basket_large_block_cl">
+                        <div><span>-</span></div>
+                        <div><span>0</span></div>
+                        <div><span>+</span></div>
+                        <div><span>корзину</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--модальное окно подробного описания товара-->
+        <div class="big_description_fog_cl" id="big_description_fog_id">
+            <!--туман модального окна подробного описания товара-->
+        </div>
+        <div class="big_description_cl" id="big_description_id">
+            <!--туман модального окна подробного описания товара-->
+            <div class="big_description_head_cl">
+                <div><span>двигатель cammins Q5</span></div>
+                <div><span>X</span></div>
+            </div>
+            <div class="big_description_block_cl">
+                <div>
+                    <!--основные характеристики-->
+                    <div>
+                        <img src="/static/work_img/qummins_1.webp" alt="Н/Ф" class="big_description_img_cl" id="big_description_img_id">
+                    </div>
+                    <div>
+                        <table class="big_description_table_cl">
+                            <thead>
+                                <tr>
+                                    <td>цена: </td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>кол.на складе: </td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>ед.измерения: </td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>страна производства: </td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>дата выпуска: </td>
+                                    <td>5</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="big_description_scrolls_cl" id="big_description_scrolls_id">
+                    <!--подробное описание-->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officia veritatis provident, atque possimus tempora eum distinctio, exercitationem aliquam obcaecati quaerat soluta consectetur ullam, dignissimos cupiditate quidem voluptates tenetur nostrum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nemo quis fuga placeat vero. Eveniet ex sint itaque necessitatibus voluptates impedit illum vitae iste, temporibus illo, soluta magni. Pariatur, eveniet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nobis corrupti culpa et voluptatibus eos itaque, nam ut vitae totam perferendis aspernatur rem inventore. Repellat corporis facilis illum amet provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci error inventore rem possimus dolorum maxime temporibus perferendis qui quis quia, nulla ducimus odit officiis sapiente vitae excepturi tempore nostrum? Deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure commodi necessitatibus nihil accusantium tempore tempora quidem dicta qui. Repudiandae libero dolores natus enim minus doloribus dignissimos ex voluptas eum explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quos consectetur assumenda voluptatibus sequi doloremque, deleniti rerum, praesentium laudantium vitae, eaque hic magni quaerat odit soluta ratione ab quo? Autem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque eum enim officia cum, ullam, eveniet porro recusandae modi fugit velit deserunt accusamus facilis vel, amet in. Optio nisi esse quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab placeat repudiandae assumenda voluptatem, sit quos repellat minus aliquid temporibus nam natus aperiam culpa ullam sapiente? Laboriosam magnam autem doloribus?
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    function welcoming_page_adaptation_f() {
+            // Адаптация высоты встречающей страницы;
+            let search_start_id = document.getElementById('search_start_id');
+            let head_website = document.getElementById('head_website_id'); // (шапка сайта);
+            let footer = document.getElementById('footer_id'); // (подвал сайта);
+            let head_website_dempf = document.getElementById('head_website_dempf_id'); // (демпфер шапка сайта);
+            search_start_id.style.height = `${window.innerHeight - head_website.offsetHeight - footer.offsetHeight}px`;
+            head_website_dempf.style.height = `${head_website.offsetHeight}px`;
+        }
+        window.addEventListener('orientationchange', _=>{welcoming_page_adaptation_f()});
+        window.addEventListener('resize', _=>{welcoming_page_adaptation_f()});
+        document.addEventListener('DOMContentLoaded', _=>{welcoming_page_adaptation_f()})
+</script>
+
+<script src="/static/2_search_js.js"></script>
+
+{% endblock %}

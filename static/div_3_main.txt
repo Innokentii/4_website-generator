@@ -1,0 +1,6 @@
+
+        <div class="search_cl" id="search_id">
+            <!--поиск-->
+            <input type="text" id="search_text_id" placeholder="поиск">
+            <img src="static/search.png" alt="Н/Ф" id="search_buttom_id">
+        </div>

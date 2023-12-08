@@ -1,0 +1,8 @@
+from flask import Flask, render_template, request, jsonify, Response
+import sqlite3 as SQL
+
+# Функция запуска сайта
+app = Flask(__name__)
+def create_app():
+    return app
+

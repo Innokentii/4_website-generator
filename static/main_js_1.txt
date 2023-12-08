@@ -1,0 +1,6 @@
+'use strict' // Установка JS на строгий режим написания кода;
+
+//===================================================================================================//
+//                                  Импортированные файлы и модули                                   //
+//VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//
+

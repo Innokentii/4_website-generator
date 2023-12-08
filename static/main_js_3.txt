@@ -1,0 +1,5 @@
+
+//===================================================================================================//
+//                                 Одноразовые функции и события                                     //
+//VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//
+

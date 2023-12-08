@@ -1,0 +1,10 @@
+
+/*___________________контакты_____________________*/
+.contacts_cl {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: solid 1px black;
+    padding-left: 10px;
+}

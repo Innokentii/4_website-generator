@@ -1,0 +1,18 @@
+
+        <div class="registration_cl" id="registration_id">
+            <!--регистрация-->
+            <div style="display: none;" class="registration_open_cl" id="registration_open_id">
+                <!--вход выполнен-->
+                <div>
+                    <!--логин и пароль-->
+                    <div>SUPER_LOGIN</div>
+                    <div><b>id:</b><span>123456789</span></div>
+                </div>
+                <img src="static/avatar.jpg" alt="Н/Ф">
+            </div>
+            <div class="registration_close_cl" id="registration_close_id">
+                <!--вход НЕ выполнен-->
+                <div id="registration_close_try_id"><span>вход</span></div>
+                <div id="registration_close_log_in_id"><span>регистрация</span></div>
+            </div>
+        </div>

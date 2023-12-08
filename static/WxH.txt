@@ -1,0 +1,31 @@
+
+    <div class="_0_media_check_cl" style="display: none;">
+        <!--Указание размеров экрана-->
+        <style>
+            ._0_media_check_cl {
+                width: 150px;
+                height: 50px;
+                position: fixed;
+                top: 50px;
+                left: 50px;
+                background-color: aqua;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <div><span>Ширина-</span><span id="_0_media_width_id">0</span>px</div>
+        <div><span>Высота-</span><span id="_0_media_length_id">0</span>px</div>
+        <script>
+            // Указание размеров экрана;
+            document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+            document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            window.addEventListener('resize', _ => {
+                console.log(123);
+                document.getElementById('_0_media_width_id').innerText = window.innerWidth;
+                document.getElementById('_0_media_length_id').innerText = window.innerHeight;
+            });
+        </script>
+    </div>

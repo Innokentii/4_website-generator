@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/3_basket_css.css">
+
+<div class="basket_start_cl" id="basket_start_id">
+    <div><h2>КОРЗИНА</h2></div>
+    <div class="basket_body_cl">
+        <div class="basket_head_cl">
+            <!--таблица товаров в корзине-->
+            <table class="basket_head_table_cl">
+                <thead class="basket_head_table_thead_cl">
+                    <tr>
+                        <th>№</th>
+                        <th>наименование товара</th>
+                        <th>цена</th>
+                        <th>кол.</th>
+                        <th>ед.изм.</th>
+                        <th>сумма</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>двигатель cammins Q5</td>
+                        <td>2480000 р</td>
+                        <td>1</td>
+                        <td>шт.</td>
+                        <td>2480000 р</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="basket_footer_cl">
+            <div><div>ФИО: </div><input type="text"></div>
+            <div><div>адрес: </div><input type="text"></div>
+            <div><div>конт.ном: </div><input type="text"></div>
+            <div><div>Email: </div><input type="text"></div>
+            <div><div>пожелания: </div><textarea id="" cols="40" rows="8"></textarea></div>
+            <div id="buttom_order_id"><span>заказ</span></div>
+        </div>
+    </div>
+</div>
+<div class="accepted_order_fog_cl" id="accepted_order_fog_id">
+    <!--туман модального окна приятия заказа-->
+
+</div>
+<div class="accepted_order_cl" id="accepted_order_id">
+    <!--карта модального окна приятия заказа-->
+    <div>
+        <div id="buttom_close_accepted_order_id">X</div>
+    </div>
+    <div><span>ваш заказ принят</span></div>
+    <div><span>скором времени вам позвонит наш менеджер</span></div>
+</div>
+<script>
+    function welcoming_page_adaptation_f() {
+        // Адаптация высоты встречающей страницы;
+        let basket_start_id = document.getElementById('basket_start_id');
+        let head_website = document.getElementById('head_website_id'); // (шапка сайта);
+        let footer = document.getElementById('footer_id'); // (подвал сайта);
+        let head_website_dempf = document.getElementById('head_website_dempf_id'); // (демпфер шапка сайта);
+        basket_start_id.style.height = `${window.innerHeight - head_website.offsetHeight - footer.offsetHeight}px`;
+        head_website_dempf.style.height = `${head_website.offsetHeight}px`;
+    }
+    window.addEventListener('orientationchange', _ => { welcoming_page_adaptation_f() });
+    window.addEventListener('resize', _ => { welcoming_page_adaptation_f() });
+    document.addEventListener('DOMContentLoaded', _ => { welcoming_page_adaptation_f() })
+</script>
+
+<script src="/static/3_basket_js.js"></script>
+
+{% endblock %}

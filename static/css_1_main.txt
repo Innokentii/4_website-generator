@@ -1,0 +1,31 @@
+
+/*___________________иконка организации_____________________*/
+.organizations_logo_cl {
+    width: 350px;
+    border-right: solid 1px black;
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.organizations_logo_cl > a > img {
+    height: 100%;
+    width: 100%;
+}
+
+.organizations_logo_cl > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.organizations_logo_cl > div > span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.organizations_logo_cl > div > span:nth-child(2) {
+    font-size: 15px;
+}

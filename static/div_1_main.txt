@@ -1,0 +1,11 @@
+
+        <div class="organizations_logo_cl" id="organizations_logo_id">
+            <!--иконка организации-->
+            <a href="/1_main">
+                <img src="static/windows_load.jpg" alt="Н/Ф" id="organizations_logo_img_id">
+            </a>
+            <div>
+                <span>ООО "Гидроакустика"</span>
+                <span>производство гидроокустических приборов</span>
+            </div>
+        </div>

@@ -1,0 +1,5 @@
+
+        <div class="location_cl" id="location_id">
+            <!--местонахождение-->
+            <div id="city_id">г. Алматы</div><img src="static/geolocation.png" alt="Н/Ф"></div>
+        </div>
